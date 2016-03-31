@@ -15,6 +15,9 @@
 		FA46A34F1CAB99D1006931CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46A34D1CAB99D1006931CA /* LaunchScreen.storyboard */; };
 		FA46A35A1CAB99D2006931CA /* GGDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA46A3591CAB99D2006931CA /* GGDataDemoTests.m */; };
 		FA46A3651CAB99D2006931CA /* GGDataDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA46A3641CAB99D2006931CA /* GGDataDemoUITests.m */; };
+		FA46A3781CAB9B74006931CA /* GGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA46A3771CAB9B74006931CA /* GGParser.m */; };
+		FA46A3841CABA865006931CA /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA46A3831CABA865006931CA /* Parser.m */; };
+		FA6BD2941CACCF360017DDF9 /* Text.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA6BD2931CACCF360017DDF9 /* Text.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		FA46A3601CAB99D2006931CA /* GGDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA46A3641CAB99D2006931CA /* GGDataDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGDataDemoUITests.m; sourceTree = "<group>"; };
 		FA46A3661CAB99D2006931CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA46A3761CAB9B74006931CA /* GGParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGParser.h; sourceTree = "<group>"; };
+		FA46A3771CAB9B74006931CA /* GGParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGParser.m; sourceTree = "<group>"; };
+		FA46A3821CABA865006931CA /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		FA46A3831CABA865006931CA /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		FA6BD2931CACCF360017DDF9 /* Text.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Text.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		FA46A33E1CAB99D1006931CA /* GGDataDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FA46A3721CAB9A21006931CA /* Custom */,
 				FA46A3421CAB99D1006931CA /* AppDelegate.h */,
 				FA46A3431CAB99D1006931CA /* AppDelegate.m */,
 				FA46A3451CAB99D1006931CA /* ViewController.h */,
@@ -110,6 +119,8 @@
 				FA46A34D1CAB99D1006931CA /* LaunchScreen.storyboard */,
 				FA46A3501CAB99D1006931CA /* Info.plist */,
 				FA46A33F1CAB99D1006931CA /* Supporting Files */,
+				FA46A3821CABA865006931CA /* Parser.h */,
+				FA46A3831CABA865006931CA /* Parser.m */,
 			);
 			path = GGDataDemo;
 			sourceTree = "<group>";
@@ -118,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				FA46A3401CAB99D1006931CA /* main.m */,
+				FA6BD2931CACCF360017DDF9 /* Text.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +150,15 @@
 				FA46A3661CAB99D2006931CA /* Info.plist */,
 			);
 			path = GGDataDemoUITests;
+			sourceTree = "<group>";
+		};
+		FA46A3721CAB9A21006931CA /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				FA46A3761CAB9B74006931CA /* GGParser.h */,
+				FA46A3771CAB9B74006931CA /* GGParser.m */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA46A34F1CAB99D1006931CA /* LaunchScreen.storyboard in Resources */,
+				FA6BD2941CACCF360017DDF9 /* Text.plist in Resources */,
 				FA46A34C1CAB99D1006931CA /* Assets.xcassets in Resources */,
 				FA46A34A1CAB99D1006931CA /* Main.storyboard in Resources */,
 			);
@@ -270,9 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA46A3781CAB9B74006931CA /* GGParser.m in Sources */,
 				FA46A3471CAB99D1006931CA /* ViewController.m in Sources */,
 				FA46A3441CAB99D1006931CA /* AppDelegate.m in Sources */,
 				FA46A3411CAB99D1006931CA /* main.m in Sources */,
+				FA46A3841CABA865006931CA /* Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +520,7 @@
 				FA46A36B1CAB99D2006931CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA46A36C1CAB99D2006931CA /* Build configuration list for PBXNativeTarget "GGDataDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +529,7 @@
 				FA46A36E1CAB99D2006931CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA46A36F1CAB99D2006931CA /* Build configuration list for PBXNativeTarget "GGDataDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +538,7 @@
 				FA46A3711CAB99D2006931CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
